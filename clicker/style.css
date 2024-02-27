@@ -1,0 +1,627 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  /* Дополнительные стили для обеспечения отсутствия прокрутки и полного заполнения вьюпорта */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.page-background{
+  height: 920px;
+  width: 1922px;
+  margin: 0;
+  background-image: url('images/background-main.jpg'); /* Укажите здесь путь к вашему изображению */
+ 
+  background-position: center; /* Центрирование изображения на странице */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.level1-page-background{
+  height: 920px;
+  width: 1922px;
+  margin: 0;
+  background-image: url('images/background-level1.jpg'); /* Укажите здесь путь к вашему изображению */
+ 
+  background-position: center; /* Центрирование изображения на странице */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.level2-page-background{
+  height: 920px;
+  width: 1922px;
+  margin: 0;
+  background-image: url('images/background-level2.jpg'); /* Укажите здесь путь к вашему изображению */
+ 
+  background-position: center; /* Центрирование изображения на странице */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.level3-page-background{
+  height: 920px;
+  width: 1922px;
+  margin: 0;
+  background-image: url('images/background-level3.jpg'); /* Укажите здесь путь к вашему изображению */
+ 
+  background-position: center; /* Центрирование изображения на странице */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.level4-page-background{
+  height: 920px;
+  width: 1922px;
+  margin: 0;
+  background-image: url('images/background-level4.jpg'); /* Укажите здесь путь к вашему изображению */
+ 
+  background-position: center; /* Центрирование изображения на странице */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.level5-page-background{
+  height: 920px;
+  width: 1922px;
+  margin: 0;
+  background-image: url('images/background-level5.jpg'); /* Укажите здесь путь к вашему изображению */
+ 
+  background-position: center; /* Центрирование изображения на странице */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boss-page-background{
+  height: 920px;
+  width: 1922px;
+  margin: 0;
+  background-image: url('images/background-boss.jpg'); /* Укажите здесь путь к вашему изображению */
+ 
+  background-position: center; /* Центрирование изображения на странице */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-container {
+  text-align: center;
+}
+
+button {
+  width: 300px; /* Установите желаемую ширину */
+  height: 100px; /* Установите желаемую высоту */
+  background-image: url('images/background-button.jpg'); /* Укажите здесь путь к вашему изображению */
+  color: white; /* Цвет текста */
+  padding: 0; /* Убираем внутренние отступы */
+  font-size: 36px; /* Размер шрифта */
+  border: none; /* Убираем границу */
+  border-radius: 8px; /* Скругляем углы */
+  cursor: pointer; /* Курсор в виде руки при наведении */
+  text-align: center; /* Текст по горизонтали по центру */
+  line-height: 50px; /* Высота строки равна высоте кнопки для вертикального центрирования */
+  display: inline-block; /* Для использования text-align и line-height */
+  transition: background-color 0.3s; /* Плавное изменение фона при наведении */
+  border: 3px solid black; /* Добавляем границу серого цвета */
+  border-radius: 8px;
+  
+}
+
+.button-container {
+  margin-bottom: 20px; /* Добавляет отступ снизу для каждого контейнера кнопки */
+}
+
+/* Последнему контейнеру кнопки убираем отступ снизу, чтобы не было лишнего пространства */
+.button-container:last-child {
+  margin-bottom: 0;
+}
+
+button:hover {
+  background-image: url('images/background-button-dark.jpg'); /* Укажите здесь путь к вашему изображению */
+}
+
+/* Уровень 1 */
+.enemy-level1 {
+  position: absolute;
+  top: 57%; /* Пример позиционирования, может быть изменен */
+  left: 57%; /* Пример позиционирования, может быть изменен */
+  transform: translate(-50%, -50%); /* Центрирование модельки игрока */
+  width: 90px; /* Задайте размеры в соответствии с вашим дизайном */
+  height: 120px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.enemy-health-bar-container {
+  position: absolute;
+  top: 48%; /* Размещение полоски здоровья вверху игрового поля */
+  left: 57%;  
+  transform: translateX(-50%);
+  width: 100px; /* Ширина полоски здоровья */
+  height: 15px; /* Высота полоски здоровья */
+  border: 2px solid #000; /* Черная граница вокруг полоски здоровья */
+  background-color: #555; /* Серый фон за полоской здоровья */
+}
+
+.enemy-health-bar {
+  width: 100%; /* Начальная ширина полоски здоровья, 100% от контейнера */
+  height: 100%;
+  background-color: #f00; /* Красная заливка полоски здоровья */
+}
+
+
+.health-bar-container {
+  position: absolute;
+  top: 90%; /* Размещение полоски здоровья вверху игрового поля */
+  left: 50%;  
+  transform: translateX(-50%);
+  width: 500px; /* Ширина полоски здоровья */
+  height: 50px; /* Высота полоски здоровья */
+  border: 2px solid #000; /* Черная граница вокруг полоски здоровья */
+  background-color: #555; /* Серый фон за полоской здоровья */
+}
+
+.health-bar {
+  width: 100%; /* Начальная ширина полоски здоровья, 100% от контейнера */
+  height: 100%;
+  background-color: #f00; /* Красная заливка полоски здоровья */
+}
+
+/* Уровень 2 */
+.enemy-level2 {
+  position: absolute;
+  top: 32%; 
+  left: 70%;
+  transform: translate(-50%, -50%); 
+  width: 100px; 
+  height: 130px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.enemy2-level2 {
+  position: absolute;
+  top: 37%; 
+  left: 14%; 
+  transform: translate(-50%, -50%); 
+  width: 90px; 
+  height: 120px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+/* Полоска хп у врага 1*/
+.enemy-level2-health-bar-container {
+  position: absolute;
+  top: 22%; 
+  left: 70%;  
+  transform: translateX(-50%);
+  width: 100px; 
+  height: 15px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy-level2-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+/* Полоска хп у врага 2*/
+.enemy2-level2-health-bar-container {
+  position: absolute;
+  top: 27%; 
+  left: 14%;  
+  transform: translateX(-50%);
+  width: 100px; 
+  height: 15px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy2-level2-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+
+/* Уровень 3 */
+.enemy-level3 {
+  position: absolute;
+  top: 46%; 
+  left: 55%;
+  transform: translate(-50%, -50%); 
+  width: 100px; 
+  height: 130px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.enemy2-level3 {
+  position: absolute;
+  top: 60%; 
+  left: 66%; 
+  transform: translate(-50%, -50%); 
+  width: 100px; 
+  height: 130px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.enemy3-level3 {
+  position: absolute;
+  top: 65%; 
+  left: 46%; 
+  transform: translate(-50%, -50%); 
+  width: 120px; 
+  height: 150px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+/* Полоска хп у врага 1*/
+.enemy-level3-health-bar-container {
+  position: absolute;
+  top: 50%; 
+  left: 66%;  
+  transform: translateX(-50%);
+  width: 100px; 
+  height: 15px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy-level3-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+/* Полоска хп у врага 2*/
+.enemy2-level3-health-bar-container {
+  position: absolute;
+  top: 36%; 
+  left: 55%;  
+  transform: translateX(-50%);
+  width: 100px; 
+  height: 15px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy2-level3-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+
+/* Полоска хп у врага 3*/
+.enemy3-level3-health-bar-container {
+  position: absolute;
+  top: 54%; 
+  left: 46%;  
+  transform: translateX(-50%);
+  width: 100px; 
+  height: 15px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy3-level3-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+
+
+/* Уровень 4 */
+.enemy-level4 {
+  position: absolute;
+  top: 44%; 
+  left: 39%;
+  transform: translate(-50%, -50%); 
+  width: 70px; 
+  height: 100px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.enemy2-level4 {
+  position: absolute;
+  top: 76%; 
+  left: 82%; 
+  transform: translate(-50%, -50%); 
+  width: 170px; 
+  height: 270px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.enemy3-level4 {
+  position: absolute;
+  top: 52%; 
+  left: 46%; 
+  transform: translate(-50%, -50%); 
+  width: 100px; 
+  height: 150px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.enemy4-level4 {
+  position: absolute;
+  top: 62%; 
+  left: 22%; 
+  transform: translate(-50%, -50%); 
+  width: 200px; 
+  height: 350px;
+  background-image: url('images/jugger.png');
+  background-size: cover;
+  background-position: center;
+}
+/* Полоска хп у врага 1*/
+.enemy-level4-health-bar-container {
+  position: absolute;
+  top: 36%; 
+  left: 39%;  
+  transform: translateX(-50%);
+  width: 100px; 
+  height: 15px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy-level4-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+/* Полоска хп у врага 2*/
+.enemy2-level4-health-bar-container {
+  position: absolute;
+  top: 59%; 
+  left: 82%;  
+  transform: translateX(-50%);
+  width: 120px; 
+  height: 20px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy2-level4-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+
+/* Полоска хп у врага 3*/
+.enemy3-level4-health-bar-container {
+  position: absolute;
+  top: 41%; 
+  left: 46%;  
+  transform: translateX(-50%);
+  width: 100px; 
+  height: 15px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy3-level4-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+
+/* Полоска хп у врага 4*/
+.enemy4-level4-health-bar-container {
+  position: absolute;
+  top: 40%; 
+  left: 22%;  
+  transform: translateX(-50%);
+  width: 150px; 
+  height: 25px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy4-level4-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+
+/* Уровень 5 */
+.enemy-level5 {
+  position: absolute;
+  top: 54%; 
+  left: 43%;
+  transform: translate(-50%, -50%); 
+  width: 70px; 
+  height: 100px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.enemy2-level5 {
+  position: absolute;
+  top: 46%; 
+  left: 72%; 
+  transform: translate(-50%, -50%); 
+  width: 130px; 
+  height: 240px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.enemy3-level5 {
+  position: absolute;
+  top: 54%; 
+  left: 54%; 
+  transform: translate(-50%, -50%); 
+  width: 100px; 
+  height: 150px;
+  background-image: url('images/enemy.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.enemy4-level5 {
+  position: absolute;
+  top: 62%; 
+  left: 22%; 
+  transform: translate(-50%, -50%); 
+  width: 200px; 
+  height: 350px;
+  background-image: url('images/jugger.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.enemy5-level5 {
+  position: absolute;
+  top: 51%; 
+  left: 34%; 
+  transform: translate(-50%, -50%); 
+  width: 130px; 
+  height: 270px;
+  background-image: url('images/jugger.png');
+  background-size: cover;
+  background-position: center;
+}
+/* Полоска хп у врага 1*/
+.enemy-level5-health-bar-container {
+  position: absolute;
+  top: 46%; 
+  left: 43%;  
+  transform: translateX(-50%);
+  width: 100px; 
+  height: 15px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy-level5-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+/* Полоска хп у врага 2*/
+.enemy2-level5-health-bar-container {
+  position: absolute;
+  top: 31%; 
+  left: 72%;  
+  transform: translateX(-50%);
+  width: 120px; 
+  height: 20px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy2-level5-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+
+/* Полоска хп у врага 3*/
+.enemy3-level5-health-bar-container {
+  position: absolute;
+  top: 43%; 
+  left: 54%;  
+  transform: translateX(-50%);
+  width: 100px; 
+  height: 15px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy3-level5-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+
+/* Полоска хп у врага 4*/
+.enemy4-level5-health-bar-container {
+  position: absolute;
+  top: 40%; 
+  left: 22%;  
+  transform: translateX(-50%);
+  width: 150px; 
+  height: 25px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy4-level5-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+
+/* Полоска хп у врага 5*/
+.enemy5-level5-health-bar-container {
+  position: absolute;
+  top: 33%; 
+  left: 34%;  
+  transform: translateX(-50%);
+  width: 150px; 
+  height: 25px; 
+  border: 2px solid #000; 
+  background-color: #555; 
+}
+
+.enemy5-level5-health-bar {
+  width: 100%; 
+  height: 100%;
+  background-color: #f00; 
+}
+
+
+/* Уровень Босс */
+.enemy-boss {
+  position: absolute;
+  top: 45%; /* Пример позиционирования, может быть изменен */
+  left: 27%; /* Пример позиционирования, может быть изменен */
+  transform: translate(-50%, -50%); /* Центрирование модельки игрока */
+  width: 300px; /* Задайте размеры в соответствии с вашим дизайном */
+  height: 600px;
+  background-image: url('images/boss.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.boss-health-bar-container {
+  position: absolute;
+  top: 8%; /* Размещение полоски здоровья вверху игрового поля */
+  left: 27%;  
+  transform: translateX(-50%);
+  width: 300px; /* Ширина полоски здоровья */
+  height: 35px; /* Высота полоски здоровья */
+  border: 2px solid #000; /* Черная граница вокруг полоски здоровья */
+  background-color: #555; /* Серый фон за полоской здоровья */
+}
+
+.boss-health-bar {
+  width: 100%; /* Начальная ширина полоски здоровья, 100% от контейнера */
+  height: 100%;
+  background-color: #f00; /* Красная заливка полоски здоровья */
+}
+
+
